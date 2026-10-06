@@ -4,7 +4,7 @@ import { site } from "@/data/site";
 import { metadata as makeMetadata } from "@/lib/seo";
 export const metadata = makeMetadata(
   "학원소개",
-  "한 수를 배우며 생각하는 힘을 기르는 곳. 개원영재바둑학원의 교육철학, 지도 방식과 학원 안내.",
+  "한 수를 배우며 생각하는 힘을 기르는 곳. 개원영재바둑교습소의 교육철학, 지도 방식과 학원 안내.",
   "/about",
 );
 export default function About() {
@@ -13,7 +13,7 @@ export default function About() {
       <PageHero
         title="작은 바둑판에서, 더 큰 세상으로"
         description="바둑을 잘 두는 즐거움과 스스로 생각하는 기쁨을 함께 배웁니다."
-        eyebrow="개원영재바둑학원 소개"
+        eyebrow="개원영재바둑교습소 소개"
       />
       <BreadcrumbSchema items={[{ name: "학원소개", path: "/about" }]} />
       <section className="content-section">
@@ -25,7 +25,7 @@ export default function About() {
               배움의 중심이 됩니다
             </h2>
             <p>
-              개원영재바둑학원은 유치부·초등학생을 위한 연령·수준별 바둑교육을 소개합니다. 아이가 한
+              개원영재바둑교습소는 유치부·초등학생을 위한 연령·수준별 바둑교육을 소개합니다. 아이가 한
               수를 선택하고 자신의 생각을 이야기하는 과정을 중요하게 생각합니다.
             </p>
             <p>

@@ -1,5 +1,5 @@
 export const site = {
-  name: "개원영재바둑학원",
+  name: "개원영재바둑교습소",
   tagline: "생각하는 아이, 더 큰 내일",
   url: "https://개원영재바둑.com",
   phone: "",

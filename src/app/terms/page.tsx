@@ -3,7 +3,7 @@ import { BreadcrumbSchema } from "@/components/JsonLd";
 import { metadata as makeMetadata } from "@/lib/seo";
 export const metadata = makeMetadata(
   "이용약관",
-  "개원영재바둑학원 홈페이지 시안과 데모 기능 이용에 관한 안내.",
+  "개원영재바둑교습소 홈페이지 시안과 데모 기능 이용에 관한 안내.",
   "/terms",
 );
 export default function Terms() {
@@ -22,7 +22,7 @@ export default function Terms() {
           </p>
           <h2>1. 홈페이지의 목적</h2>
           <p>
-            이 홈페이지는 개원영재바둑학원의 교육과정과 상담 방법을 안내하기 위한 제작 시안입니다.
+            이 홈페이지는 개원영재바둑교습소의 교육과정과 상담 방법을 안내하기 위한 제작 시안입니다.
           </p>
           <h2>2. 정보의 확인</h2>
           <p>
