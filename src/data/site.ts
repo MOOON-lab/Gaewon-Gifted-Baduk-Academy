@@ -1,7 +1,7 @@
 export const site = {
   name: "개원영재바둑학원",
   tagline: "생각하는 아이, 더 큰 내일",
-  url: "https://gaewon-baduk-academy-20260909.manimjung78.chatgpt.site",
+  url: "https://개원영재바둑.com",
   phone: "",
   address: "",
   hours: "",
