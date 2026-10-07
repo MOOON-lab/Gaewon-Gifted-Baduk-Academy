@@ -12,10 +12,14 @@ type FieldName =
   | "consent";
 export default function ContactForm() {
   const lock = useRef(false);
-  const operator = process.env.NEXT_PUBLIC_CONSULTATION_OPERATOR || "";
-  const privacyContact = process.env.NEXT_PUBLIC_CONSULTATION_PRIVACY_CONTACT || "";
-  const retention = process.env.NEXT_PUBLIC_CONSULTATION_RETENTION || "";
-  const ready = !!(operator && privacyContact && retention && process.env.NEXT_PUBLIC_CONSULTATION_ENABLED === "true");
+  const [valid, setValid] = useState(false);
+  const consentPolicy = `개인정보 수집·이용 안내
+
+수집 항목: 보호자명, 연락처, 학생 연령/학년, 바둑 경험, 희망 상담 방식, 희망 수업 시간, 문의 내용
+수집 목적: 상담 신청 확인, 상담 연락 및 수업 안내
+보유 및 이용 기간: 상담 완료 후 6개월까지 보관 후 파기
+동의 거부 권리: 개인정보 수집·이용에 대한 동의를 거부할 수 있으나, 동의하지 않을 경우 온라인 상담 신청이 제한될 수 있습니다.
+문의: 개원영재바둑교습소 / 전화 02-579-9714`;
   const [submitError, setSubmitError] = useState("");
   const [errors, setErrors] = useState<Partial<Record<FieldName, string>>>({});
   const [busy, setBusy] = useState(false);
@@ -43,10 +47,6 @@ export default function ContactForm() {
       if (first instanceof HTMLElement) first.focus();
       return;
     }
-    if (!ready) {
-      setSubmitError("개인정보 수집 안내가 확정되지 않아 온라인 접수를 아직 받지 않습니다. 전화 02-579-9714로 문의해 주세요. 입력 내용은 전송되지 않았습니다.");
-      return;
-    }
     if (data.get("bot-field")) {
       setSubmitError("자동 입력으로 판단되어 접수하지 않았습니다. 전화로 문의해 주세요.");
       return;
@@ -65,6 +65,7 @@ export default function ContactForm() {
       if (!response.ok) throw new Error("SUBMISSION_FAILED");
       setResult("상담 신청이 전송되었습니다. 확인 후 남겨주신 연락처로 안내드리겠습니다.");
       form.reset();
+      setValid(false);
     } catch {
       setSubmitError("접수 완료를 확인하지 못했습니다. 입력 내용은 유지됩니다. 중복 접수가 걱정되시면 02-579-9714로 문의해 주세요.");
     } finally {
@@ -93,14 +94,18 @@ export default function ContactForm() {
       className="card form-card"
       noValidate
       onSubmit={submit}
-      onInput={() => {
+      onChange={(event) => {
         if (result) setResult("");
+        const data = new FormData(event.currentTarget);
+        const value = (name: string) => String(data.get(name) || "").trim();
+        const phone = value("phone").replace(/[\s-]/g, "");
+        setValid(value("guardian").length >= 2 && /^(01[016789]\d{7,8}|02\d{7,8}|0[3-6][1-5]\d{7,8})$/.test(phone) && !!value("age") && !!value("experience") && !!value("method") && data.get("consent") === "동의");
       }}
       aria-label="상담 신청 폼"
       aria-busy={busy}
     >
       <input type="hidden" name="form-name" value="consultation" />
-      <input type="hidden" name="consent-policy" value={ready ? `처리자: ${operator}; 목적: 상담 접수 및 연락; 보유 기간: ${retention}; 문의: ${privacyContact}` : "미확정"} />
+      <input type="hidden" name="consent-policy" value={consentPolicy} />
       <p hidden aria-hidden="true"><label>자동입력 방지<input name="bot-field" tabIndex={-1} autoComplete="off" /></label></p>
       <h2 style={{ fontSize: 26, marginBottom: 10 }}>무료 체험수업 상담</h2>
       <p style={{ fontSize: 14, marginBottom: 24 }}>
@@ -187,9 +192,7 @@ export default function ContactForm() {
           />
         </div>
       </div>
-      <p className="data-note">
-        {ready ? `개인정보처리자: ${operator}. 수집 목적: 상담 접수 및 연락. 수집 항목: 보호자 성함, 연락처, 학생 연령·학년, 바둑 경험, 상담 방식, 선택 입력한 희망 시간·문의 내용, 동의 여부. 보유 기간: ${retention}. 문의: ${privacyContact}. 제출 내용은 Netlify Forms에 전송·저장되며 교습소 관리자가 확인합니다. 동의를 거부할 수 있으나 온라인 상담 접수는 제한됩니다.` : "개인정보 수집 안내를 확정 중이므로 온라인 제출은 아직 열리지 않았습니다. 입력은 가능하며 전화 02-579-9714로 문의해 주세요."}
-      </p>
+      <p className="data-note" style={{ whiteSpace: "pre-line" }}>{consentPolicy}</p>
       <label className="consent" htmlFor="consent">
         <input {...props("consent")} type="checkbox" value="동의" required />
         <span>
@@ -205,11 +208,11 @@ export default function ContactForm() {
           </p>
         )}
       </div>
-      <button className="button primary" type="submit" disabled={busy || !ready}>
+      <button className="button primary" type="submit" disabled={busy || !valid}>
         {busy ? "접수 중…" : "상담 신청하기"}
       </button>
       <p className="data-note">
-        {ready ? "신청 후 안내 메시지를 확인해 주세요." : "개인정보 안내 확정 전에는 입력 내용이 전송되지 않습니다."}
+        필수항목을 입력하고 개인정보 수집·이용에 동의하면 신청할 수 있습니다.
       </p>
     </form>
   );
