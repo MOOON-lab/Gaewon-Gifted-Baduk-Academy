@@ -21,8 +21,8 @@ export default function Contact() {
       <section className="content-section">
         <div className="container">
           <div className="notice" style={{ marginTop: 0, marginBottom: 28 }}>
-            <strong>현재 데모 모드입니다.</strong> 입력 검증만 체험할 수 있으며, 내용이
-            전송·저장되거나 상담이 접수되지 않습니다. 실제 접수 서비스와 연락처는 준비 중입니다.
+            <strong>온라인 상담 신청을 받고 있습니다.</strong> 필수항목을 입력하고 개인정보 수집·이용에
+            동의한 뒤 신청해 주세요. 접수 후 남겨주신 연락처로 안내드립니다.
           </div>
           <div className="contact-grid">
             <ContactForm />
@@ -63,3 +63,4 @@ export default function Contact() {
     </>
   );
 }
+
