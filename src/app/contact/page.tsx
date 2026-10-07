@@ -5,8 +5,8 @@ import ContactForm from "@/components/ContactForm";
 import { site } from "@/data/site";
 import { metadata as makeMetadata } from "@/lib/seo";
 export const metadata = makeMetadata(
-  "상담 및 무료 체험수업",
-  "우리 아이에게 맞는 바둑교육을 상담하세요. 무료 체험수업 신청 안내와 상담 데모 폼.",
+  "상담문의",
+  "우리 아이에게 맞는 바둑교육을 상담하세요. 상담문의 및 온라인 상담 신청 안내.",
   "/contact",
 );
 export default function Contact() {
@@ -14,7 +14,7 @@ export default function Contact() {
     <>
       <PageHero
         title="우리 아이의 첫 한 수를 함께해요"
-        eyebrow="상담 및 무료 체험수업"
+        eyebrow="상담문의"
         description="아이의 연령과 경험을 알려주시면, 알맞은 시작을 함께 고민하겠습니다."
       />
       <BreadcrumbSchema items={[{ name: "상담문의", path: "/contact" }]} />

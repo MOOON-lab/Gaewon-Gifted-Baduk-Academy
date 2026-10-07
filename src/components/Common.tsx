@@ -21,7 +21,7 @@ import { Logo } from "./Header";
 
 export function Button({
   href = "/contact",
-  children = "무료 체험수업 신청",
+  children = "상담문의",
   secondary = false,
 }: {
   href?: string;
@@ -195,7 +195,7 @@ export function CTASection() {
       <div className="container cta-inner">
         <div>
           <p className="eyebrow">아이의 첫 한 수, 함께 시작해요</p>
-          <h2>지금, 무료 체험수업으로 시작하세요</h2>
+          <h2>궁금한 점은 상담으로 안내해 드립니다</h2>
           <p>아이의 가능성, 바둑이 함께합니다.</p>
         </div>
         <Button>상담 신청</Button>
@@ -306,7 +306,7 @@ export function Footer() {
           </Link>
         )}
         <Link href="/contact">
-          체험수업 신청 <ArrowRight size={17} />
+          상담문의 <ArrowRight size={17} />
         </Link>
       </div>
     </>

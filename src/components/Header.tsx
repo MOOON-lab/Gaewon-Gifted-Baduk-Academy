@@ -51,7 +51,7 @@ export default function Header() {
           ))}
         </nav>
         <Link className="button primary header-cta" href="/contact">
-          무료 체험수업 신청
+          상담문의
         </Link>
         <button
           ref={button}
@@ -87,7 +87,7 @@ export default function Header() {
           </Link>
         ))}
         <Link className="button primary" href="/contact" onClick={() => setOpen(false)}>
-          무료 체험수업 신청
+          상담문의
         </Link>
       </nav>
     </header>

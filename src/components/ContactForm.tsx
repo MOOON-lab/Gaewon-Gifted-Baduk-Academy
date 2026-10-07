@@ -107,7 +107,7 @@ export default function ContactForm() {
       <input type="hidden" name="form-name" value="consultation" />
       <input type="hidden" name="consent-policy" value={consentPolicy} />
       <p hidden aria-hidden="true"><label>자동입력 방지<input name="bot-field" tabIndex={-1} autoComplete="off" /></label></p>
-      <h2 style={{ fontSize: 26, marginBottom: 10 }}>무료 체험수업 상담</h2>
+      <h2 style={{ fontSize: 26, marginBottom: 10 }}>상담문의</h2>
       <p style={{ fontSize: 14, marginBottom: 24 }}>
         별표(*) 항목은 필수입니다. 수업과 입학에 관한 문의를 남겨 주세요.
       </p>

@@ -16,7 +16,7 @@ import { articles } from "@/data/articles";
 import { metadata as makeMetadata } from "@/lib/seo";
 export const metadata = makeMetadata(
   "생각하는 힘을 키우는 바둑교육",
-  "아이의 집중력과 사고력을 바둑으로 키웁니다. 개원영재바둑교습소의 교육과정과 무료 체험수업 안내.",
+  "아이의 집중력과 사고력을 바둑으로 키웁니다. 개원영재바둑교습소의 교육과정과 상담문의 안내.",
   "/",
 );
 export default function Home() {

@@ -4,7 +4,7 @@ import { faqs } from "@/data/site";
 import { metadata as makeMetadata } from "@/lib/seo";
 export const metadata = makeMetadata(
   "자주 묻는 질문",
-  "바둑 입문, 반 편성, 수강료, 시간표와 무료 체험수업에 관한 질문을 확인하세요.",
+  "바둑 입문, 반 편성, 수강료, 시간표와 상담문의에 관한 질문을 확인하세요.",
   "/faq",
 );
 export default function FAQ() {

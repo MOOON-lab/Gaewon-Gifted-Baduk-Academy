@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: `${site.name} | 생각하는 힘을 키우는 바둑교육`, template: `%s | ${site.name}` },
   description:
-    "유치부부터 초등 고급반까지, 아이의 눈높이에 맞춘 바둑교육. 교육과정을 살펴보고 무료 체험수업을 상담하세요.",
+    "유치부부터 초등 고급반까지, 아이의 눈높이에 맞춘 바둑교육. 교육과정을 살펴보고 상담으로 문의하세요.",
   icons: { icon: "/favicon.svg" },
   robots: { index: true, follow: true },
 };
