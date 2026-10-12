@@ -1,4 +1,4 @@
-import { Button, CTASection, PageHero, Photo } from "@/components/Common";
+import { Button, CTASection, PageHero, TeacherPhoto } from "@/components/Common";
 import { BreadcrumbSchema } from "@/components/JsonLd";
 import { teacher } from "@/data/site";
 import { metadata as makeMetadata } from "@/lib/seo";
@@ -19,10 +19,8 @@ export default function Teacher() {
       <section className="content-section">
         <div className="container split">
           <div>
-            <Photo priority />
-            <p className="data-note">
-              AI 교육 장면 예시입니다. 김상순 선생님의 실제 프로필 사진은 등록 예정입니다.
-            </p>
+            <TeacherPhoto priority />
+            
           </div>
           <div>
             <h2>{teacher.name} 선생님</h2>

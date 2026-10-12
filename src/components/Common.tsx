@@ -73,6 +73,13 @@ export function Photo({
     </figure>
   );
 }
+export function TeacherPhoto({ className = "", priority = false }: { className?: string; priority?: boolean }) {
+  return (
+    <figure className={`photo ${className}`}>
+      <Image src="/images/kim-sang-soon.png" alt="김상순 선생님 소개 사진 — 바둑판 앞의 모습" width={435} height={497} priority={priority} style={{ width: "100%", height: "auto", objectFit: "contain" }} />
+    </figure>
+  );
+}
 export function ValueStrip() {
   const values = [
     { icon: Sprout, first: "바둑으로 키우는", second: "더 큰 내일" },

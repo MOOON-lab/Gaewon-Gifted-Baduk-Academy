@@ -6,6 +6,7 @@ import {
   Button,
   CTASection,
   Photo,
+  TeacherPhoto,
   ProgramCard,
   SectionHeading,
   StoryCards,
@@ -70,7 +71,7 @@ export default function Home() {
       </section>
       <section className="section teacher-section">
         <div className="container teacher-grid">
-          <Photo className="teacher-photo" />
+          <TeacherPhoto className="teacher-photo" />
           <div className="teacher-copy">
             <p className="eyebrow">아이의 생각을 듣는 선생님</p>
             <h2>김상순 선생님 소개</h2>
