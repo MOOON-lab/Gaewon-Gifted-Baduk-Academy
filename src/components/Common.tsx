@@ -181,7 +181,7 @@ export function ArticleCard({ article }: { article: (typeof articles)[number] })
         />
       </div>
       <div>
-        <span className="category">{article.category} · 예시 글</span>
+        <span className="category">{article.category}{article.draft ? " · 예시 글" : " · 기사 소개"}</span>
         <h3>{article.title}</h3>
         <p>{article.description}</p>
         <time dateTime={article.date}>{article.date.replaceAll("-", ".")}</time>

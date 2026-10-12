@@ -35,7 +35,7 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
             <h1>{a.title}</h1>
             <p>{a.description}</p>
             <p className="article-meta" style={{ marginTop: 18 }}>
-              <time dateTime={a.date}>{a.date.replaceAll("-", ".")}</time> · 홈페이지 예시 콘텐츠
+              <time dateTime={a.date}>{a.date.replaceAll("-", ".")}</time> · {a.draft ? "홈페이지 예시 콘텐츠" : "기사 소개"}
             </p>
           </div>
         </header>
@@ -51,10 +51,10 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
             />
           </figure>
           <p className="data-note">{site.imageNote}</p>
-          <div className="notice">
+          {a.draft && <div className="notice">
             학원 검토 전 예시 글입니다. 아래 내용은 일반적인 활동 제안으로, 전문 연구 결과나
             교육효과를 보장하는 자료가 아닙니다.
-          </div>
+          </div>}
           <div className="prose">
             {a.sections.map((section) => (
               <section key={section.title}>
@@ -63,6 +63,7 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
               </section>
             ))}
           </div>
+          {a.sourceUrl && <p className="data-note">출처: 중앙일보 김경록 기자 · <a href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{a.sourceTitle} — 블로그에서 원문 보기</a><br />이 글은 기사 소개이며, 기사 전문과 사진을 재게시하지 않았습니다.</p>}
           <Link href="/research" className="text-link" style={{ margin: "18px 0 40px" }}>
             ← 연구소 전체 글로 돌아가기
           </Link>
@@ -85,7 +86,7 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
           image: site.url + a.image,
           mainEntityOfPage: site.url + `/research/${slug}`,
           articleSection: a.category,
-          creativeWorkStatus: "Draft",
+          creativeWorkStatus: a.draft ? "Draft" : "Published",
           inLanguage: "ko-KR",
         }}
       />

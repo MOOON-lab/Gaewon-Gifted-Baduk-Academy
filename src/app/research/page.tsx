@@ -20,7 +20,7 @@ export default function Research() {
         <div className="container">
           <ResearchBrowser />
           <div className="notice">
-            현재 글은 홈페이지 구성을 위한 예시 콘텐츠입니다. 학원에서 검토한 공식 교육 자료나 연구
+            ‘예시 글’로 표시된 글은 홈페이지 구성을 위한 예시 콘텐츠입니다. 학원에서 검토한 공식 교육 자료나 연구
             결과가 아니며, 특정 교육효과를 보장하지 않습니다.
           </div>
         </div>
