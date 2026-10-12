@@ -2,8 +2,8 @@ export const site = {
   name: "개원영재바둑교습소",
   tagline: "생각하는 아이, 더 큰 내일",
   url: "https://개원영재바둑.com",
-  phone: "",
-  address: "",
+  phone: "02-579-9714",
+  address: "서울특별시 강남구 개포로22길 96, 포이빌딩 3층 (개포동)",
   hours: "",
   sns: [] as { label: string; url: string }[],
   heroImage: "/images/classroom.png",
@@ -161,6 +161,6 @@ export const faqs = [
   {
     question: "학원 위치와 운영시간은 어디서 확인하나요?",
     answer:
-      "주소, 전화번호, 운영시간은 정보 입력 예정입니다. 실제 정보가 확인되면 학원소개와 상담문의 페이지에 반영됩니다.",
+      "주소는 서울특별시 강남구 개포로22길 96, 포이빌딩 3층 (개포동)이며, 전화번호는 02-579-9714입니다. 운영시간은 전화로 문의해 주세요.",
   },
 ];
