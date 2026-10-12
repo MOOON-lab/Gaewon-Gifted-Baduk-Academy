@@ -63,7 +63,6 @@ export const programs = [
   {
     slug: "kindergarten",
     name: "유치부",
-    audience: "5~7세",
     level: "즐거운 첫 만남",
     summary: "바둑을 처음 만나는 아이도 쉽고 재미있게",
     goal: "놀이를 통해 바둑과 친해지고, 차례를 기다리는 습관을 익힙니다.",
@@ -76,7 +75,6 @@ export const programs = [
   {
     slug: "elementary-beginner",
     name: "입문반",
-    audience: "1~2학년",
     level: "기초를 탄탄하게",
     summary: "바둑의 기초를 차근차근, 생각하는 습관부터",
     goal: "기본 규칙을 이해하고 스스로 한 판을 두는 경험을 만듭니다.",
@@ -89,7 +87,6 @@ export const programs = [
   {
     slug: "elementary-intermediate",
     name: "중급반",
-    audience: "3~4학년",
     level: "생각을 더 깊게",
     summary: "여러 수를 비교하며 나만의 판단을 만드는 시간",
     goal: "여러 선택을 비교하고, 선택한 이유를 설명하는 힘을 기릅니다.",
@@ -102,7 +99,6 @@ export const programs = [
   {
     slug: "advanced",
     name: "고급반",
-    audience: "5학년 이상",
     level: "넓게 보고 깊게 생각하기",
     summary: "전략적 사고와 실전 감각을 키우는 심화 수업",
     goal: "전체 판을 살피며 계획을 세우고 자신의 대국을 돌아봅니다.",
@@ -114,7 +110,7 @@ export const programs = [
   },
 ];
 export const programNotice =
-  "연령·학년과 교육 내용은 임시 안내입니다. 실제 반 편성은 학생의 경험과 수준을 확인한 후 상담으로 안내합니다.";
+  "교육 내용은 임시 안내입니다. 실제 반 편성은 학생의 경험과 수준을 확인한 후 상담으로 안내합니다.";
 export const stories = [
   {
     title: "실제 학부모 후기 등록 예정",
@@ -141,7 +137,7 @@ export const faqs = [
   {
     question: "학년만으로 반이 정해지나요?",
     answer:
-      "학년은 참고 기준입니다. 규칙 이해도와 대국 경험, 학습 속도 등을 확인해 적합한 과정을 상담합니다. 현재 게시된 연령 기준은 임시 안내입니다.",
+      "학년은 참고 기준입니다. 규칙 이해도와 대국 경험, 학습 속도 등을 확인해 적합한 과정을 상담합니다.",
   },
   {
     question: "수강료와 수업 시간표가 궁금해요.",

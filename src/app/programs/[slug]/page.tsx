@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const p = programs.find((p) => p.slug === slug);
   return p
-    ? makeMetadata(p.name, `${p.audience} 대상 ${p.name}. ${p.goal}`, `/programs/${slug}`)
+    ? makeMetadata(p.name, `${p.name}. ${p.goal}`, `/programs/${slug}`)
     : {};
 }
 export default async function ProgramDetail({ params }: { params: Promise<{ slug: string }> }) {
@@ -48,8 +48,6 @@ export default async function ProgramDetail({ params }: { params: Promise<{ slug
           <div>
             <h2>이런 아이와 함께해요</h2>
             <dl className="detail-list">
-              <dt>대상</dt>
-              <dd>{p.audience} (임시 기준)</dd>
               <dt>추천 기준</dt>
               <dd>{p.recommend}</dd>
               <dt>수업 목표</dt>

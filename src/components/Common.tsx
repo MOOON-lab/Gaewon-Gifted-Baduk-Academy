@@ -140,7 +140,7 @@ export function ProgramCard({
       <div className="program-body">
         <span className="program-level">{program.level}</span>
         <h3>
-          {program.name} <small>({program.audience})</small>
+          {program.name}
         </h3>
         <p>{program.summary}</p>
         <span className="card-link">

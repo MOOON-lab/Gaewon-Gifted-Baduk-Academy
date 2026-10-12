@@ -12,7 +12,7 @@ export default function Programs() {
     <>
       <PageHero
         title="우리 아이에게 맞는 한 걸음"
-        eyebrow="연령·수준별 교육과정"
+        eyebrow="수준별 교육과정"
         description="처음의 설렘부터 깊이 있는 생각까지, 아이의 속도에 맞는 수업을 만납니다."
       />
       <BreadcrumbSchema items={[{ name: "교육과정", path: "/programs" }]} />
@@ -31,7 +31,7 @@ export default function Programs() {
         <div className="container">
           <SectionHeading
             title="교육과정을 한눈에 비교하세요"
-            description="학년과 함께 바둑 경험, 규칙 이해도, 학습 속도를 살펴봅니다."
+            description="바둑 경험, 규칙 이해도, 학습 속도를 살펴봅니다."
           />
           <div
             className="table-wrap"
@@ -42,7 +42,7 @@ export default function Programs() {
             <table>
               <thead>
                 <tr>
-                  <th scope="col">과정 / 대상</th>
+                  <th scope="col">과정</th>
                   <th scope="col">교육 목표</th>
                   <th scope="col">주요 학습 내용</th>
                   <th scope="col">추천 기준</th>
@@ -53,8 +53,6 @@ export default function Programs() {
                   <tr key={p.slug}>
                     <th scope="row">
                       {p.name}
-                      <br />
-                      <small>{p.audience} · 임시 기준</small>
                     </th>
                     <td>{p.goal}</td>
                     <td>{p.topics.join(" · ")}</td>
