@@ -75,7 +75,7 @@ export const programs = [
   },
   {
     slug: "elementary-beginner",
-    name: "초등 입문반",
+    name: "입문반",
     audience: "1~2학년",
     level: "기초를 탄탄하게",
     summary: "바둑의 기초를 차근차근, 생각하는 습관부터",
@@ -88,7 +88,7 @@ export const programs = [
   },
   {
     slug: "elementary-intermediate",
-    name: "초등 중급반",
+    name: "중급반",
     audience: "3~4학년",
     level: "생각을 더 깊게",
     summary: "여러 수를 비교하며 나만의 판단을 만드는 시간",
@@ -101,7 +101,7 @@ export const programs = [
   },
   {
     slug: "advanced",
-    name: "초등 고급반",
+    name: "고급반",
     audience: "5학년 이상",
     level: "넓게 보고 깊게 생각하기",
     summary: "전략적 사고와 실전 감각을 키우는 심화 수업",

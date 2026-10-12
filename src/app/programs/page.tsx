@@ -4,7 +4,7 @@ import { programs, programNotice } from "@/data/site";
 import { metadata as makeMetadata } from "@/lib/seo";
 export const metadata = makeMetadata(
   "교육과정",
-  "유치부, 초등 입문반, 중급반, 고급반의 대상과 목표를 비교하고 아이에게 맞는 바둑교육을 찾아보세요.",
+  "유치부, 입문반, 중급반, 고급반의 대상과 목표를 비교하고 아이에게 맞는 바둑교육을 찾아보세요.",
   "/programs",
 );
 export default function Programs() {
