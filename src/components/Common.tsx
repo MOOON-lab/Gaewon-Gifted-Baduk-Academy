@@ -75,8 +75,8 @@ export function Photo({
 }
 export function TeacherPhoto({ className = "", priority = false }: { className?: string; priority?: boolean }) {
   return (
-    <figure className={`photo ${className}`}>
-      <Image src="/images/kim-sang-soon.png" alt="김상순 선생님 소개 사진 — 바둑판 앞의 모습" width={435} height={497} priority={priority} style={{ width: "100%", height: "auto", objectFit: "contain" }} />
+    <figure className={`photo ${className}`} style={{ position: "relative", aspectRatio: "4 / 3", height: "auto", overflow: "hidden" }}>
+      <Image src="/images/kim-sang-soon.png" alt="김상순 선생님 소개 사진 — 바둑판과 바둑돌" fill sizes="(max-width: 768px) 100vw, 50vw" priority={priority} style={{ objectFit: "cover", objectPosition: "center bottom" }} />
     </figure>
   );
 }
