@@ -63,7 +63,7 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
               </section>
             ))}
           </div>
-          {a.sourceUrl && <p className="data-note">출처: 중앙일보 김경록 기자 · <a href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{a.sourceTitle} — 블로그에서 원문 보기</a><br />아래 소개글과 함께 제공된 기사 이미지를 실었습니다.</p>}
+          {a.sourceUrl && <p className="data-note">출처: {a.sourceLabel || "중앙일보 김경록 기자"} · <a href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{a.sourceTitle} — 블로그에서 원문 보기</a><br />{a.sourceLabel ? "블로그 원문을 바탕으로 정리한 소개글입니다. 당시 사진과 자세한 기록은 원문에서 확인해 주세요." : "소개글과 함께 제공된 기사 이미지를 실었습니다."}</p>}
           <Link href="/research" className="text-link" style={{ margin: "18px 0 40px" }}>
             ← 연구소 전체 글로 돌아가기
           </Link>

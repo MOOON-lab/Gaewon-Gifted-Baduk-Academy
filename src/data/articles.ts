@@ -7,6 +7,63 @@ export const categories = [
 ];
 export const articles = [
 {
+  "slug": "alphago-festival-2016",
+  "title": "2016 알파고 바둑축제",
+  "category": "바둑 이야기",
+  "description": "성남 탄천운동장에서 열린 2016 알파고 바둑축제 참가와 입상 소식을 전합니다.",
+  "date": "2026-10-13",
+  "image": "/images/classroom.png",
+  "imagePosition": "center",
+  "draft": false,
+  "sourceUrl": "https://blog.naver.com/bd6111/220741693871",
+  "sourceTitle": "2016 알파고 바둑축제",
+  "sourceLabel": "개원영재바둑교습소 네이버 블로그",
+  "sections": [
+    {
+      "title": "대회 참가 소식",
+      "body": "개원영재바둑교습소 블로그에 따르면, 2016 알파고 바둑축제에 참가한 학생들이 학년부에서 1위와 3위에 올랐습니다. 당시 참가 기록과 사진은 아래 블로그 원문에서 확인하실 수 있습니다."
+    }
+  ]
+},
+{
+  "slug": "brain-baduk-festival-2016",
+  "title": "2016 브레인 바둑축제",
+  "category": "바둑 이야기",
+  "description": "2016 브레인 바둑축제에서 거둔 학생들의 대회 성적을 소개합니다.",
+  "date": "2026-10-13",
+  "image": "/images/classroom.png",
+  "imagePosition": "center",
+  "draft": false,
+  "sourceUrl": "https://blog.naver.com/bd6111/220865872549",
+  "sourceTitle": "2016 브레인 바둑축제",
+  "sourceLabel": "개원영재바둑교습소 네이버 블로그",
+  "sections": [
+    {
+      "title": "학생들의 대회 기록",
+      "body": "교습소 블로그에는 2016 브레인 바둑축제에서 학년부 우승, 꿈나무조 8강, 새싹부 16강을 기록한 소식이 남아 있습니다. 자세한 당시 기록은 블로그 원문에서 확인하실 수 있습니다."
+    }
+  ]
+},
+{
+  "slug": "the-glory-baduk-consulting",
+  "title": "넷플릭스 드라마 ‘더 글로리’ 바둑 자문 참여",
+  "category": "바둑 이야기",
+  "description": "교습소 블로그에 소개된 ‘더 글로리’ 바둑 자문 참여 소식입니다.",
+  "date": "2026-10-13",
+  "image": "/images/classroom.png",
+  "imagePosition": "center",
+  "draft": false,
+  "sourceUrl": "https://blog.naver.com/bd6111/223390697127",
+  "sourceTitle": "넷플릭스 드라마 ‘더 글로리’ 바둑 자문 참여",
+  "sourceLabel": "개원영재바둑교습소 네이버 블로그",
+  "sections": [
+    {
+      "title": "작품 속 바둑 이야기",
+      "body": "개원영재바둑교습소 블로그에는 넷플릭스 드라마 ‘더 글로리’의 바둑 자문에 참여했다는 소식이 소개되어 있습니다. 관련 게시물과 이미지는 아래 원문 링크에서 확인하실 수 있습니다."
+    }
+  ]
+},
+{
   "slug": "teachers-near-us",
   "title": "바둑으로 만나는 스승과 배움",
   "category": "바둑 이야기",
