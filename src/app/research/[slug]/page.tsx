@@ -40,17 +40,17 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
           </div>
         </header>
         <div className="container narrow">
-          <figure className="article-cover">
+          <figure className="article-cover" style={a.imageHeight ? { aspectRatio: "auto", height: "auto" } : undefined}>
             <Image
               src={a.image}
-              alt="바둑을 함께 배우는 AI 교육 장면 예시"
-              width={1536}
-              height={1024}
+              alt={a.imageAlt || "바둑을 함께 배우는 AI 교육 장면 예시"}
+              width={a.imageWidth || 1536}
+              height={a.imageHeight || 1024}
               loading="eager"
-              style={{ objectPosition: a.imagePosition }}
+              style={{ objectPosition: a.imagePosition, ...(a.imageHeight ? { width: "100%", height: "auto", aspectRatio: "auto", objectFit: "contain" as const } : {}) }}
             />
           </figure>
-          <p className="data-note">{site.imageNote}</p>
+          <p className="data-note">{a.imageCaption || site.imageNote}</p>
           {a.draft && <div className="notice">
             학원 검토 전 예시 글입니다. 아래 내용은 일반적인 활동 제안으로, 전문 연구 결과나
             교육효과를 보장하는 자료가 아닙니다.
@@ -63,7 +63,7 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
               </section>
             ))}
           </div>
-          {a.sourceUrl && <p className="data-note">출처: 중앙일보 김경록 기자 · <a href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{a.sourceTitle} — 블로그에서 원문 보기</a><br />이 글은 기사 소개이며, 기사 전문과 사진을 재게시하지 않았습니다.</p>}
+          {a.sourceUrl && <p className="data-note">출처: 중앙일보 김경록 기자 · <a href={a.sourceUrl} target="_blank" rel="noopener noreferrer">{a.sourceTitle} — 블로그에서 원문 보기</a><br />아래 소개글과 함께 제공된 기사 이미지를 실었습니다.</p>}
           <Link href="/research" className="text-link" style={{ margin: "18px 0 40px" }}>
             ← 연구소 전체 글로 돌아가기
           </Link>
