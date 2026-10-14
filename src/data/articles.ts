@@ -7,6 +7,39 @@ export const categories = [
 ];
 export const articles = [
 {
+  "slug": "women-baduk-history-kim-sang-soon",
+  "title": "한국 여성바둑의 역사 속 김상순 선생님",
+  "category": "바둑 이야기",
+  "description": "한국 여성바둑 50년사를 다룬 기사에서 초대 여류국수 김상순 선생님의 기록을 소개합니다.",
+  "date": "2026-10-14",
+  "image": "/images/women-baduk-history.png",
+  "imagePosition": "center",
+  "imageAlt": "여류국수전과 대한여성기우회의 발족 — 김상순 이름이 등장하는 기사 발췌",
+  "imageWidth": 957,
+  "imageHeight": 431,
+  "imageCaption": "사용자 제공 기사 발췌 이미지 · 아래 소개글에서 김상순 이름을 강조했습니다.",
+  "draft": false,
+  "highlightName": "김상순",
+  "sourceUrl": "https://www.cyberoro.com/news/N_news_view.oro?num=521843",
+  "sourceTitle": "한국 여성바둑 50년사 따라가보니",
+  "sourceLabel": "사이버오로 · 유경춘 (2016년 6월 27일, 일요신문 기사 전재)",
+  "sourceNote": "기사 내용을 요약한 소개글입니다. 첨부된 발췌 이미지와 함께 관련 기록을 소개하며, 전체 내용은 원문에서 확인하실 수 있습니다.",
+  "sections": [
+    {
+      "title": "여성바둑의 발자취를 돌아보다",
+      "body": "2016년 사이버오로에 소개된 기사는 여성바둑의 초기 대회부터 이후의 발전까지를 살펴봅니다. 여류국수전은 방송을 통해서도 알려지며 여성바둑에 대한 관심을 넓히는 계기가 됐습니다."
+    },
+    {
+      "title": "초대 여류국수 김상순",
+      "body": "기사에 따르면 김상순 선생님은 첫 여류국수전에서 우승 후보로 꼽히던 윤희율과 조영숙을 이기고 우승했습니다. 기사는 김상순 선생님의 등장을 당시 여성바둑계에 새로운 흐름을 알린 사건으로 소개합니다."
+    },
+    {
+      "title": "오늘의 배움으로 이어지는 기록",
+      "body": "이 기록을 통해 김상순 선생님이 한국 여성바둑의 역사에서 남긴 발자취를 만나볼 수 있습니다. 상세한 대회 이야기와 여성바둑의 발전 과정은 아래 원문 링크를 통해 읽어보세요."
+    }
+  ]
+},
+{
   "slug": "women-amateur-guksu-2022",
   "title": "김상순 선생님, 제47기 전국 아마여자국수전 개막식 참석",
   "category": "바둑 이야기",

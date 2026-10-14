@@ -65,7 +65,7 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
             {a.sections.map((section) => (
               <section key={section.title}>
                 <h2>{section.title}</h2>
-                <p>{section.body}</p>
+                <p>{a.highlightName ? section.body.split(a.highlightName).map((part, index) => <span key={index}>{index > 0 && <mark style={{ backgroundColor: "#fff0a6", color: "#142d45", fontWeight: 700, padding: "0 3px" }}>{a.highlightName}</mark>}{part}</span>) : section.body}</p>
               </section>
             ))}
           </div>
