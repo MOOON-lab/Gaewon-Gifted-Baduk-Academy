@@ -40,14 +40,14 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
           </div>
         </header>
         <div className="container narrow">
-          <figure className="article-cover" style={a.imageHeight ? { aspectRatio: "auto", height: "auto" } : undefined}>
+          <figure className="article-cover" style={a.imageHeight ? { aspectRatio: "auto", height: "auto", maxHeight: "none", overflow: "visible" } : undefined}>
             <Image
               src={a.image}
               alt={a.imageAlt || "바둑을 함께 배우는 AI 교육 장면 예시"}
               width={a.imageWidth || 1536}
               height={a.imageHeight || 1024}
               loading="eager"
-              style={{ objectPosition: a.imagePosition, ...(a.imageHeight ? { width: "100%", height: "auto", aspectRatio: "auto", objectFit: "contain" as const } : {}) }}
+              style={{ objectPosition: a.imagePosition, ...(a.imageHeight ? { width: "100%", height: "auto", maxHeight: "none", display: "block", aspectRatio: "auto", objectFit: "contain" as const } : {}) }}
             />
           </figure>
           <p className="data-note">{a.imageCaption || site.imageNote}</p>
