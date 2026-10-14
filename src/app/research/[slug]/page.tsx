@@ -55,6 +55,12 @@ export default async function Article({ params }: { params: Promise<{ slug: stri
             학원 검토 전 예시 글입니다. 아래 내용은 일반적인 활동 제안으로, 전문 연구 결과나
             교육효과를 보장하는 자료가 아닙니다.
           </div>}
+          {a.gallery?.map((photo) => (
+            <figure key={photo.src} style={{ margin: "24px 0" }}>
+              <Image src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} sizes="(max-width: 768px) 100vw, 740px" style={{ display: "block", width: "100%", height: "auto", borderRadius: 6 }} />
+              <figcaption className="data-note">{photo.alt}</figcaption>
+            </figure>
+          ))}
           <div className="prose">
             {a.sections.map((section) => (
               <section key={section.title}>
