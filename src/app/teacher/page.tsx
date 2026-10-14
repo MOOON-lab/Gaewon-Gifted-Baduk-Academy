@@ -28,19 +28,7 @@ export default function Teacher() {
             <div className="quote-panel" style={{ marginTop: 24 }}>
               {teacher.philosophy}
             </div>
-            <section aria-label="바둑과 어린이 교육" style={{ marginTop: 32 }}>
-          <h3 style={{ margin: "0 0 20px" }}>바둑은 어떤 점에서 어린이 교육에 좋을까요?</h3>
-          <div style={{ display: "grid", gap: 20, lineHeight: 1.9 }}>
-            <p style={{ margin: 0, lineHeight: 1.9 }}>
-              바둑에는 ‘수읽기’라는 것이 있습니다. 이 ‘수읽기’를 하다 보면 두뇌의 회전이 빨라지고 몇 수 앞을 미리 보면서 생각을 하게 되면 계산 능력이 뛰어나게 좋아집니다.
-              이 점은 단순히 수학적인 능력 향상뿐 아니라, 미래의 일을 논리적으로 예측하는 사고(세상을 살아가는 지혜)를 키우게 되어 아이가 성장한 후 더욱 빛을 발합니다.
-            </p>
-            <p style={{ margin: 0, lineHeight: 1.9 }}>또한, 바둑을 두는 사이에 매사 집중하는 습관이 생겨 한 가지 일에 집중력이 생기게끔 도와줍니다.</p>
-            <p style={{ margin: 0, lineHeight: 1.9 }}>매번 대국을 할 때마다 새로운 바둑을 두게 되는 것이지요. 그래서 창의성과 응용력이 좋아집니다.</p>
-            <p style={{ margin: 0, lineHeight: 1.9 }}>완전한 한 판의 바둑을 다 외울 수 있으면 그 아이는 다른 아이들과는 기억력에 있어서는 완전히 다르다는 것을 느끼실 것입니다.</p>
-            <p style={{ margin: 0, lineHeight: 1.9 }}>바둑을 두면 뇌의 신경세포를 전체적으로 넓게 사용해 신경세포 간의 연결을 좋게 만들어 주므로 머리가 좋아지게 됩니다.</p>
-          </div>
-            </section>
+            
           </div>
         </div>
       </section>
@@ -107,19 +95,6 @@ export default function Teacher() {
               <Button />
             </div>
           </div>
-        </div>
-      </section>
-      <section className="content-section tinted">
-        <div className="container narrow">
-          <h2>바둑이 교육에 미치는 좋은 점</h2>
-          <ul style={{ paddingLeft: 24, lineHeight: 2 }}>
-            <li>주의 집중력 증가 → 수업태도 향상</li>
-            <li>창의성 증진 → 과학탐구력 증진</li>
-            <li>수학적 사고기능의 촉진 → 수학능력 향상</li>
-            <li>논리적 설득 및 인과관계 → 글쓰기 및 논리적 사고 함양</li>
-            <li>기억력 증진 및 정서적 안정성 → 전반적인 수업능력 높임</li>
-          </ul>
-          <p style={{ marginTop: 24, textAlign: "right", fontWeight: 700 }}>김상순 원장 (초대여류국수)</p>
         </div>
       </section>
       <CTASection />
