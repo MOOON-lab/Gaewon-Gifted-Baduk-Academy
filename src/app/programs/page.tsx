@@ -70,9 +70,6 @@ export default function Programs() {
               </div>
             ))}
           </div>
-          <div className="notice">
-            수강료: 상담 문의 · 시간표: 상담 문의. 과정 안내는 실제 운영 내용 확인 전 시안입니다.
-          </div>
           <div className="section-heading">
             <h2>어떤 반이 맞을지 고민되시나요?</h2>
             <p>아이의 나이와 바둑 경험을 알려주세요.</p>
